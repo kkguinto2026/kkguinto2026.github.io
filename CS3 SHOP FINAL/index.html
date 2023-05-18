@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>The Unofficial Valorant Web Version || Marketplace</title>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'VALORANT', sans-serif;
+            color: aliceblue;
+        }
+
+        h1 {
+            margin: 30px;
+            text-align: center;
+            color: azure;
+        }
+
+        h2,
+        hr {
+            color: azure;
+        }
+
+        .form-group {
+            margin: 10px;
+        }
+
+        .card {
+            margin: 10px;
+        }
+
+        .card {
+            padding-top: 10px;
+            border-style: solid;
+            border-color: rgb(201, 64, 64);
+            border-width: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">The Unofficial Valorant Web Version</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Home Lobby</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active" aria-current="page" href="index.html">Marketplace</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="agents.html">Special Agents</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search (For Design)"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <h1>The Purchasing Station!</h1>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2><u>Cart:</u></h2>
+                    <div class="card text-bg-dark">
+                        <div class="card-body">
+                            <h5 class="card-title">Total: <span id="cart-total">0</span></h5>
+                            <p class="card-text">Items in cart:</p>
+                            <ul class="cart-items list-group list-group-flush">
+                                <li><i>No items in cart</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
+                        <h2><u>Delivery Details:</u></h2>
+                        <div class="form-group">
+                            <label for="custname">Customer name:</label>
+                            <input type="text" class="form-control" name="cust_name" id="custname">
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryaddr">Delivery address:</label>
+                            <input type="text" class="form-control" name="cust_addr" id="deliveryaddr">
+                        </div>
+                        <div class="form-group">
+                            <label for="custemail">Customer email:</label>
+                            <input type="text" class="form-control" name="cust_email" id="custemail">
+                        </div>
+                        <div class="form-group">
+                            <div class="button">
+                                <input type="submit" value="Submit Response" class="btn btn-success">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="cust_order" id="cust_order">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h1>The Weapons Marketplace!</h1>
+        <hr>
+        <div class="container">
+            <h2><u>The Vandal Section:</u></h2>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Sakura-Collection-Vandal-HD.jpg"
+                        alt="Sakura Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Sakura Vandal</h4>
+                        <p class="card-text">Php 875.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Sakura Vandal'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Aristocrat-Vandal.jpg"
+                        alt="Aristocrat Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Aristocrat Vandal</h4>
+                        <p class="card-text">Php 1275.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Aristocrat Vandal'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-Neptune-Collection-Vandal-HD.jpg"
+                        alt="Neptune Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Neptune Vandal</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Neptune Vandal'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/10/Valorant-Reaver-Collection-Vandal-HD.jpg"
+                        alt="Reaver Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Reaver Vandal</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Reaver Vandal'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Prime-Vandal-hd.jpg"
+                        alt="Glitchpop Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Glitchpop Vandal</h4>
+                        <p class="card-text">Php 2175.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Glitchpop Vandal'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Elderflame-Collection-Vandal-HD.jpg"
+                        alt="Elderflame Vandal" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Elderflame Vandal</h4>
+                        <p class="card-text">Php 2475.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Elderflame Vandal'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2><u>The Phantom Section:</u></h2>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/09/Valorant-Smite-Collection-Phantom-HD.jpg"
+                        alt="Smite Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Smite Phantom</h4>
+                        <p class="card-text">Php 875.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Smite Phantom'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/05/Valorant-Minima-Collection-Phantom-HD.jpg"
+                        alt="Minima Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Minima Phantom</h4>
+                        <p class="card-text">Php 1275.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Minima Phantom'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/11/Valorant-Ion-Collection-Phantom-HD.jpg"
+                        alt="Ion Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Ion Phantom</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Ion Phantom'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/08/Valorant-Recon-Collection-Phantom-HD.jpg"
+                        alt="Recon Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Recon Phantom</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Recon Phantom'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/10/Valorant-Singularity-Collection-Phantom-HD.jpg"
+                        alt="Singularity Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Singularity Phantom</h4>
+                        <p class="card-text">Php 2175.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Singularity Phantom'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-Protocol-Collection-Phantom-HD.jpg"
+                        alt="Protocol Phantom" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Protocol Phantom</h4>
+                        <p class="card-text">Php 2475.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Protocol Phantom'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2><u>The Pistol Section:</u></h2>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/01/Valorant-Prism-II-Collection-Shorty-HD.jpg"
+                        alt="Prism II Shorty" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Prism II Shorty</h4>
+                        <p class="card-text">Php 875.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Prism II Shorty'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/11/Valorant-Wasteland-Collection-Sheriff-HD.jpg"
+                        alt="Wasteland Sheriff" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Wasteland Sheriff</h4>
+                        <p class="card-text">Php 1275.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Wasteland Sheriff'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/04/Valorant-Foresaken-Collection-Classic-HD.jpg"
+                        alt="Forsaken Classic" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Forsaken Classic</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Forsaken Classic'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-Gaia_s-Vengeance-Collection-Ghost-HD.jpg"
+                        alt="Gaia's Vengeance Ghost" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Gaia's Vengeance Ghost</h4>
+                        <p class="card-text">Php 1775.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Gaia Vengeance Ghost'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/12/Valorant-BlastX-Collection-Frenzy-HD.jpg"
+                        alt="Blast X Frenzy" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Blast X Frenzy</h4>
+                        <p class="card-text">Php 2175.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Blast X Frenzy'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/09/Valorant-Spectrum-Collection-Classic-HD.jpg"
+                        alt="Spectrum Classic" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Spectrum Classic</h4>
+                        <p class="card-text">Php 2675.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Spectrum Classic'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h2><u>The Melee Section: </u></h2>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Luxe-Knife-HD.jpg"
+                        alt="Luxe Knife" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Luxe Knife</h4>
+                        <p class="card-text">Php 1750.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Luxe Knife'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-Nunca-Olvidados-Collection-knife-HD.jpg"
+                        alt="Nunca Olvidados Cuchillo" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Nunca Olvidados Cuchillo</h4>
+                        <p class="card-text">Php 2550</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Nunca Olvidados Cuchillo'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/09/Valorant-Go-Vol-2-Collection-Comb-HD.jpg"
+                        alt="Yoru's Butterfly Comb" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Yoru's Butterfly Comb</h4>
+                        <p class="card-text">Php 3550.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Yoru Butterfly Comb'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-RGX-11Z-Pro-Collection-Melee-HD.jpg"
+                        alt="RGX 11Z Katana" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">RGX 11Z Katana</h4>
+                        <p class="card-text">Php 4350.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='RGX 11Z Katana'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/2021/07/Valorant-Sentinels-of-Light-Collection-Knife-HD.jpg"
+                        alt="Relic of The Sentinel" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Relic of The Sentinel</h4>
+                        <p class="card-text">Php 4350.00</p>
+                        <button class="btn btn-outline-primary add-to-cart" data-name='Relic of The Sentinel'>Add
+                            to
+                            Cart</button>
+                    </div>
+                </div>
+                <div class="card col-sm-12 col-md-4 mb-3 m-0 text-bg-dark">
+                    <img src="https://valorantstrike.com/wp-content/uploads/Valorant-Champions-2021-Collection-Karambit-HD.jpg"
+                        alt="Valorant Champions 2021 Karambit" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">Valorant Champions 2021 Karambit</h4>
+                        <p class="card-text">Php 5350.00</p>
+                        <button class="btn btn-outline-primary add-to-cart"
+                            data-name='Valorant Champions 2021 Karambit'>Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let cart = [];
+        const product = {
+            'Sakura Vandal': 875,
+            'Aristocrat Vandal': 1275,
+            'Neptune Vandal': 1775,
+            'Reaver Vandal': 1775,
+            'Glitchpop Vandal': 2175,
+            'Elderflame Vandal': 2475,
+            'Smite Phantom': 875,
+            'Minima Phantom': 1275,
+            'Ion Phantom': 1775,
+            'Recon Phantom': 1775,
+            'Singularity Phantom': 2175,
+            'Protocol Phantom': 2475,
+            'Prism II Shorty': 875,
+            'Wasteland Sheriff': 1275,
+            'Forsaken Classic': 1775,
+            'Gaia Vengeance Ghost': 1775,
+            'Blast X Frenzy': 2175,
+            'Spectrum Classic': 2475,
+            'Luxe Knife': 1750,
+            'Nunca Olvidados Cuchillo': 2550,
+            'Yoru Butterfly Comb': 3550,
+            'RGX 11Z Katana': 4350,
+            'Relic of The Sentinel': 4350,
+            'Valorant Champions 2021 Karambit': 5350
+        };
+
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const prod_name = button.dataset.name;
+                const prod_price = product[prod_name];
+                cart.push({ prod_name, prod_price });
+                displayCart();
+            });
+        });
+
+        function displayCart() {
+            const cartItems = document.querySelector(".cart-items");
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<i>No items in cart</i>';
+            } else {
+                let html = "";
+                cart.forEach((item, index) => {
+                    html += `
+        <li class="list-group-item">${item.prod_name}: Php ${item.prod_price}
+          <button class="btn btn-danger btn-sm float-end" data-index="${index}">Remove</button>
+        </li>
+      `;
+                });
+                cartItems.innerHTML = html;
+                const removeButtons = document.querySelectorAll(".cart-items button");
+                removeButtons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        const index = button.getAttribute("data-index");
+                        cart.splice(index, 1);
+                        displayCart();
+                    });
+                });
+            }
+            displayCartTotal();
+        }
+
+        function displayCartTotal() {
+            const cartTotal = document.querySelector("#cart-total");
+            const total = cart.reduce((acc, item) => acc + item.prod_price, 0);
+            cartTotal.innerText = total;
+            document.querySelector("#cust_order").value = JSON.stringify(cart);
+        }
+    </script>
+</body>
+
+</html>
